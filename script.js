@@ -44,10 +44,30 @@ const MSG = {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* ---------- Monthly / yearly switch on the prices page ---------- */
+  function setBilling(mode) {
+    const yearly = mode === "yearly";
+    $$(".billing-toggle button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.billing === mode)));
+    $$(".price[data-monthly]").forEach((p) => {
+      p.querySelector(".amount").textContent = yearly ? p.dataset.yearly : p.dataset.monthly;
+      p.querySelector(".per").textContent = yearly ? "/year" : "/month";
+    });
+    $$(".yearly-note").forEach((n) => (n.hidden = !yearly));
+    $$("a[data-pkg]").forEach((a) => {
+      a.href = `contact.html?pkg=${a.dataset.pkg}${yearly ? "&plan=yearly" : ""}#contact`;
+    });
+  }
+  $$(".billing-toggle button").forEach((b) => b.addEventListener("click", () => setBilling(b.dataset.billing)));
+
   /* ---------- Package chosen on the prices page prefills the form ---------- */
-  const pkgParam = new URLSearchParams(location.search).get("pkg");
+  const params = new URLSearchParams(location.search);
+  const pkgParam = params.get("pkg");
   const msgBox = $("#f-message");
-  if (pkgParam && msgBox && /^(Starter|Growth|Premium)$/.test(pkgParam)) msgBox.value = MSG.waPkg(pkgParam);
+  if (pkgParam && msgBox && /^(Starter|Growth|Premium)$/.test(pkgParam)) {
+    msgBox.value = params.get("plan") === "yearly"
+      ? `Hi Fresh Ads Studio, I'd like to book the ${pkgParam} package for a full year (paid yearly, 2 months free).`
+      : MSG.waPkg(pkgParam);
+  }
 
   /* ---------- Package buttons prefill the form ---------- */
   $$("[data-pkg]").forEach((btn) =>

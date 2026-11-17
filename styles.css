@@ -359,3 +359,10 @@ p { margin: 0 0 1em; }
 .phone video { width: 100%; height: auto; display: block; aspect-ratio: 9 / 16; object-fit: cover; }
 .mobile-nav { gap: 4px; }
 .mobile-nav a { flex: 1 1 0; text-align: center; padding: 7px 6px; font-size: .84rem; }
+
+/* ---------- Monthly / yearly toggle ---------- */
+.billing-toggle { display: flex; width: max-content; max-width: 100%; margin: -8px auto 34px; background: var(--bg-alt); border: 1px solid var(--line); border-radius: 999px; padding: 4px; gap: 4px; }
+.billing-toggle button { font: inherit; font-weight: 800; border: 0; background: transparent; color: var(--ink-soft); padding: 10px 20px; border-radius: 999px; cursor: pointer; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; }
+.billing-toggle button[aria-pressed="true"] { background: var(--primary); color: #fff; }
+.billing-toggle .save { background: var(--accent); color: var(--ink); font-size: .75rem; padding: 2px 8px; border-radius: 999px; }
+.yearly-note { color: var(--primary-dark); font-weight: 800; font-size: .92rem; margin: -6px 0 6px; }
