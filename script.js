@@ -61,7 +61,7 @@ const MSG = {
     input.focus();
   };
 
-  form.addEventListener("submit", async (e) => {
+  if (form) form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form).entries());
     status.className = "form-status";
@@ -107,9 +107,33 @@ const MSG = {
     status.classList.add("ok");
   });
 
+  /* ---------- Videos: play while on screen, tap to pause ---------- */
+  const vids = $$("video[data-autoplay]");
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  vids.forEach((v) => {
+    v.addEventListener("click", () => {
+      if (v.paused) { v.dataset.paused = ""; v.play().catch(() => {}); }
+      else { v.dataset.paused = "1"; v.pause(); }
+    });
+  });
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const vo = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        const v = en.target;
+        if (en.isIntersecting && !v.dataset.paused) {
+          v.preload = "auto";
+          v.play().catch(() => {});
+        } else if (!en.isIntersecting) {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.35 });
+    vids.forEach((v) => vo.observe(v));
+  }
+
   /* ---------- Reveal on scroll ---------- */
-  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const items = $$(".card, .step, .price-card, .pf-item, .featured-client, .faq details");
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const items = $$(".card, .step, .price-card, .pf-item, .vid, .showcase, .faq details");
     items.forEach((el) => el.classList.add("reveal"));
     const ro = new IntersectionObserver((entries) => {
       entries.forEach((en) => {
