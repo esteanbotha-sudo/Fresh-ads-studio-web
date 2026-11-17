@@ -366,3 +366,20 @@ p { margin: 0 0 1em; }
 .billing-toggle button[aria-pressed="true"] { background: var(--primary); color: #fff; }
 .billing-toggle .save { background: var(--accent); color: var(--ink); font-size: .75rem; padding: 2px 8px; border-radius: 999px; }
 .yearly-note { color: var(--primary-dark); font-weight: 800; font-size: .92rem; margin: -6px 0 6px; }
+
+/* ---------- Mixed-shape video layout ---------- */
+.video-masonry { columns: 2; column-gap: 14px; margin-top: 32px; }
+.video-masonry .vid { break-inside: avoid; margin: 0 0 14px; width: 100%; }
+.video-masonry.teaser { columns: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: center; }
+.video-masonry.teaser .vid { margin: 0; }
+.video-masonry.teaser > :last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
+.video-wide { max-width: 900px; margin: 4px auto 0; }
+@media (min-width: 760px) {
+  .video-masonry { columns: 3; column-gap: 18px; }
+  .video-masonry .vid { margin-bottom: 18px; }
+  .video-masonry.teaser { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .video-masonry.teaser > :last-child:nth-child(odd) { grid-column: auto; width: auto; }
+}
+.video-masonry .vid, .video-wide .vid { aspect-ratio: auto; background: #fff; border: 1px solid var(--line); }
+.video-masonry .vid video, .video-wide .vid video { aspect-ratio: var(--ar, 9 / 16); height: auto; }
+.video-masonry .vid figcaption, .video-wide .vid figcaption { position: static; background: #fff; border-radius: 0; padding: 10px 12px; }

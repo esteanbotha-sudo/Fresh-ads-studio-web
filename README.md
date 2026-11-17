@@ -5,11 +5,11 @@ A fast, mobile-first, one-page website. It's plain HTML, CSS and JavaScript, so 
 ```
 index.html     Home: what I do, how it works, recent videos, prices preview
 prices.html    Prices: the 3 packages and FAQ
-work.html      Videos & reviews: client work, Christmas stories, ads, recommendations
+work.html      My work: It's All Accounting showreel and monthly videos
 contact.html   About & contact: about the studio, WhatsApp, email, form
 styles.css     design (brand colour is --primary at the top)
 script.js      CONFIG (contact details), contact form
-assets/        favicon, videos (assets/videos), ad thumbnails and logos (samples)
+assets/        favicon and videos (assets/videos)
 ```
 
 To preview it, open `index.html` in a browser.
@@ -21,8 +21,7 @@ The header, menu and footer are repeated on each page, so change them in all fou
 | What | Where |
 |---|---|
 | Contact form by email (optional) | Set `CONFIG.formEndpoint` to a Formspree URL. When it's empty, the form opens WhatsApp with the message filled in |
-| Recommendations | **These are samples.** Replace them with real client quotes in `work.html` |
-| Example work | It's All Accounting is real client work. Glow, Bean There, Karoo, Granny's, Van Wyk and FlowFix are **examples**. Replace them as you get real clients (`work.html`, `assets/`) |
+| Client reviews | None yet. Ask It's All Accounting for a quote and add a reviews section to `work.html` |
 | Prices (R500 / R750 / R1 000) | `prices.html`, plus the preview cards on `index.html` |
 | Domain | Once you have one, add `<link rel="canonical" href="https://yourdomain/">` in `index.html` |
 
