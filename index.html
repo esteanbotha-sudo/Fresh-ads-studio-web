@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fresh Ads Studio | Monthly Ads &amp; Video Content for Small Businesses in South Africa</title>
-  <meta name="description" content="Fresh Ads Studio creates professional social media ads and short promo videos for small businesses across South Africa, every month. No agency, no long contracts. Book a free call.">
+  <meta name="description" content="Fresh Ads Studio creates professional social media ads and short promo videos for small businesses across South Africa, every month. No agency, no long contracts. Chat on WhatsApp or email.">
   <meta name="theme-color" content="#0e9f6e">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -52,7 +52,7 @@
         <a href="#faq">FAQ</a>
       </nav>
       <div class="header-actions">
-        <a href="#contact" class="btn btn-primary btn-sm header-cta">Book a call</a>
+        <a href="https://wa.me/27713307822" class="btn btn-primary btn-sm header-cta js-wa" target="_blank" rel="noopener">WhatsApp me</a>
       </div>
     </div>
   </header>
@@ -66,11 +66,11 @@
           <h1>Fresh ads and videos for your business, <span class="hl">every month.</span></h1>
           <p class="lead">I design your social media ads, make short videos and run your Facebook and Instagram campaigns. You get professional content without hiring an agency.</p>
           <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary btn-lg">Book a free call</a>
-            <a href="https://wa.me/27713307822?text=Hi%20Fresh%20Ads%20Studio%2C%20I%27d%20like%20to%20chat%20about%20ads%20for%20my%20business." class="btn btn-whatsapp btn-lg js-wa" target="_blank" rel="noopener">
+            <a href="https://wa.me/27713307822" class="btn btn-primary btn-lg js-wa" target="_blank" rel="noopener">
               <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#icon-wa"/></svg>
               <span>WhatsApp me</span>
             </a>
+            <a href="mailto:esteanbotha@gmail.com" class="btn btn-outline btn-lg js-email">Email me</a>
           </div>
           <ul class="hero-points">
             <li>No agency fees</li>
@@ -152,8 +152,8 @@
         <ol class="steps">
           <li class="step">
             <span class="step-num">1</span>
-            <h3>Free call</h3>
-            <p>We chat for 20 minutes about your business, your customers and your goals.</p>
+            <h3>Free chat</h3>
+            <p>Send me a WhatsApp or email about your business, your customers and your goals.</p>
           </li>
           <li class="step">
             <span class="step-num">2</span>
@@ -326,7 +326,7 @@
         </details>
         <details>
           <summary>How quickly will I get my content?</summary>
-          <p>Your first batch of content is ready within 7 working days of our call. After that, I deliver each month's content before the month starts. Premium clients get changes back within 24 hours.</p>
+          <p>Your first batch of content is ready within 7 working days of our first chat. After that, I deliver each month's content before the month starts. Premium clients get changes back within 24 hours.</p>
         </details>
         <details>
           <summary>Do I own the content?</summary>
@@ -343,33 +343,11 @@
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <p class="eyebrow center">Let's talk</p>
-        <h2 id="contact-title" class="section-title">Book your free call</h2>
-        <p class="section-sub">Pick a time in the calendar, send a message or WhatsApp me. I usually reply within a few hours.</p>
+        <h2 id="contact-title" class="section-title">WhatsApp or email me</h2>
+        <p class="section-sub">No phone calls needed. Send a WhatsApp or an email, or fill in the form. I usually reply within a few hours.</p>
 
         <div class="contact-grid">
-          <div class="contact-left">
-            <form class="card contact-form" id="contact-form" novalidate>
-              <div class="field">
-                <label for="f-name">Your name</label>
-                <input id="f-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="f-business">Business name</label>
-                <input id="f-business" name="business" type="text" autocomplete="organization" required>
-              </div>
-              <div class="field">
-                <label for="f-phone">Phone number</label>
-                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="082 123 4567" required>
-              </div>
-              <div class="field">
-                <label for="f-message">Message</label>
-                <textarea id="f-message" name="message" rows="4" placeholder="Tell me a bit about your business and what you need."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block btn-lg">Send message</button>
-              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            </form>
-
-            <ul class="contact-links">
+          <ul class="contact-links">
               <li>
                 <a href="https://wa.me/27713307822" class="js-wa" target="_blank" rel="noopener">
                   <span class="cl-icon wa" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><use href="#icon-wa"/></svg></span>
@@ -383,14 +361,26 @@
                 </a>
               </li>
             </ul>
-          </div>
-
-          <div class="card booking" id="booking">
-            <h3>Choose a time for your free call</h3>
-            <div class="booking-frame" id="booking-frame">
-              <p class="booking-loading">Loading calendar…</p>
-            </div>
-          </div>
+            <form class="card contact-form" id="contact-form" novalidate>
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-business">Business name</label>
+                <input id="f-business" name="business" type="text" autocomplete="organization" required>
+              </div>
+              <div class="field">
+                <label for="f-phone">WhatsApp number</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="082 123 4567" required>
+              </div>
+              <div class="field">
+                <label for="f-message">Message</label>
+                <textarea id="f-message" name="message" rows="4" placeholder="Tell me a bit about your business and what you need."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block btn-lg">Send message</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ A fast, mobile-first, one-page website. It's plain HTML, CSS and JavaScript, so 
 ```
 index.html     page content and text
 styles.css     design (brand colour is --primary at the top)
-script.js      CONFIG (contact details), form, booking calendar
+script.js      CONFIG (contact details), contact form
 assets/        favicon, portfolio thumbnails, client logos (samples)
 ```
 
@@ -15,7 +15,6 @@ To preview it, open `index.html` in a browser.
 
 | What | Where |
 |---|---|
-| Booking calendar | Set `CONFIG.bookingUrl` in `script.js` to your Calendly link. Until then, visitors see a "WhatsApp to book" card |
 | Contact form by email (optional) | Set `CONFIG.formEndpoint` to a Formspree URL. When it's empty, the form opens WhatsApp with the message filled in |
 | Testimonials | **These are samples.** Replace them with real client quotes in `index.html` |
 | Portfolio, logos, featured client & stats | **These are samples** (Glow Hair Studio, etc.). Replace them with your real work in `assets/` and `index.html` |

@@ -7,8 +7,6 @@ const CONFIG = {
   whatsapp: "27713307822",
   phoneDisplay: "071 330 7822",
   email: "esteanbotha@gmail.com",
-  // Your Calendly (or Cal.com / Google booking page) link. Leave as-is to show a WhatsApp fallback.
-  bookingUrl: "https://calendly.com/your-link/free-call",
   // Optional: a form backend such as Formspree ("https://formspree.io/f/xxxxxx").
   // If empty, the form opens WhatsApp with the message filled in.
   formEndpoint: ""
@@ -17,17 +15,13 @@ const CONFIG = {
 const MSG = {
   waHello: "Hi Fresh Ads Studio, I'd like to chat about ads for my business.",
   waPkg: (p) => `Hi Fresh Ads Studio, I'm interested in the ${p} package.`,
-  required: "Please fill in your name, business and phone number.",
-  phone: "Please enter a valid phone number.",
+  required: "Please fill in your name, business and WhatsApp number.",
+  phone: "Please enter a valid WhatsApp number.",
   sending: "Sending…",
   sent: "Thanks! Your message is on its way. I'll get back to you soon.",
   opened: "WhatsApp has opened with your message. Just tap send!",
   failed: "Something went wrong. Please WhatsApp or email me instead.",
-  formIntro: "New enquiry from the website",
-  bookTitle: "Booking calendar coming soon",
-  bookText: "In the meantime, send me a WhatsApp and we'll find a time that suits you.",
-  bookBtn: "WhatsApp to book",
-  calTitle: "Booking calendar"
+  formIntro: "New enquiry from the website"
 };
 
 (function () {
@@ -112,37 +106,6 @@ const MSG = {
     status.textContent = MSG.opened;
     status.classList.add("ok");
   });
-
-  /* ---------- Booking calendar (lazy-loaded) ---------- */
-  const frame = $("#booking-frame");
-  const bookingConfigured = CONFIG.bookingUrl && !/your-link/.test(CONFIG.bookingUrl);
-
-  function loadBooking() {
-    if (frame.dataset.loaded) return;
-    frame.dataset.loaded = "1";
-    if (!bookingConfigured) {
-      frame.innerHTML =
-        `<div class="booking-fallback"><h4>${MSG.bookTitle}</h4><p>${MSG.bookText}</p>` +
-        `<a class="btn btn-primary" target="_blank" rel="noopener" href="${waLink(MSG.waHello)}">${MSG.bookBtn}</a></div>`;
-      return;
-    }
-    const iframe = document.createElement("iframe");
-    const sep = CONFIG.bookingUrl.includes("?") ? "&" : "?";
-    iframe.src = `${CONFIG.bookingUrl}${sep}hide_gdpr_banner=1&primary_color=0e9f6e`;
-    iframe.title = MSG.calTitle;
-    iframe.loading = "lazy";
-    frame.innerHTML = "";
-    frame.appendChild(iframe);
-  }
-
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((entries) => {
-      if (entries.some((en) => en.isIntersecting)) { loadBooking(); io.disconnect(); }
-    }, { rootMargin: "400px" });
-    io.observe(frame);
-  } else {
-    loadBooking();
-  }
 
   /* ---------- Reveal on scroll ---------- */
   if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
