@@ -44,6 +44,11 @@ const MSG = {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* ---------- Package chosen on the prices page prefills the form ---------- */
+  const pkgParam = new URLSearchParams(location.search).get("pkg");
+  const msgBox = $("#f-message");
+  if (pkgParam && msgBox && /^(Starter|Growth|Premium)$/.test(pkgParam)) msgBox.value = MSG.waPkg(pkgParam);
+
   /* ---------- Package buttons prefill the form ---------- */
   $$("[data-pkg]").forEach((btn) =>
     btn.addEventListener("click", () => {

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About &amp; Contact | Fresh Ads Studio</title>
+  <meta name="description" content="About Fresh Ads Studio, a one-person studio making short-form videos and social media ads for small businesses in South Africa. Contact me on WhatsApp 071 330 7822 or by email.">
+  <meta name="theme-color" content="#0e9f6e">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fresh Ads Studio | Monthly Ads &amp; Video Content for Small Businesses">
+  <meta property="og:description" content="Fresh, professional ads and short videos for your business, every month.">
+  <meta property="og:image" content="assets/portfolio/reel-salon.svg">
+  <meta property="og:locale" content="en_ZA">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Fresh Ads Studio home">
+        <img src="assets/favicon.svg" alt="" width="36" height="36">
+        <span>Fresh Ads <b>Studio</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="prices.html">Prices</a>
+        <a href="work.html">Videos &amp; reviews</a>
+        <a href="contact.html" aria-current="page">About &amp; contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://wa.me/27713307822" class="btn btn-primary btn-sm header-cta js-wa" target="_blank" rel="noopener">WhatsApp me</a>
+      </div>
+    </div>
+    <nav class="mobile-nav" aria-label="Pages">
+      <a href="index.html">Home</a>
+      <a href="prices.html">Prices</a>
+      <a href="work.html">Videos</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">About &amp; contact</p>
+        <h1>Fresh, professional content without the agency</h1>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============
+         Tip: add a friendly photo of yourself here; it builds trust. -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <h2 id="about-title">About Fresh Ads Studio</h2>
+          <p>Fresh Ads Studio is a one-person studio in South Africa. Every month I make short-form videos and social media ads for small businesses: accountants, salons, shops and service businesses that know they need to be on social media but don't have the time or skills.</p>
+          <p>You deal with me directly, on WhatsApp or email. There are no account managers, no agency fees and no long contracts. You just get fresh content every month that looks professional and sounds like your business.</p>
+        </div>
+        <ul class="about-points">
+          <li class="card"><h3>You talk to me directly</h3><p>The person you message is the person making your videos.</p></li>
+          <li class="card"><h3>Month-to-month</h3><p>No long contracts. Stay because it works, not because you have to.</p></li>
+          <li class="card"><h3>Quick replies</h3><p>I usually reply on WhatsApp within a few hours.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 9. CONTACT ============ -->
+    <section class="section contact how" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="eyebrow center">Let's talk</p>
+        <h2 id="contact-title" class="section-title">WhatsApp or email me</h2>
+        <p class="section-sub">No phone calls needed. Send a WhatsApp or an email, or fill in the form. I usually reply within a few hours.</p>
+
+        <div class="contact-grid">
+          <ul class="contact-links">
+              <li>
+                <a href="https://wa.me/27713307822" class="js-wa" target="_blank" rel="noopener">
+                  <span class="cl-icon wa" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><use href="#icon-wa"/></svg></span>
+                  <span><b>WhatsApp</b><span class="js-phone">071 330 7822</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:esteanbotha@gmail.com" class="js-email">
+                  <span class="cl-icon" aria-hidden="true">✉️</span>
+                  <span><b>Email</b><span class="js-email-text">esteanbotha@gmail.com</span></span>
+                </a>
+              </li>
+            </ul>
+            <form class="card contact-form" id="contact-form" novalidate>
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-business">Business name</label>
+                <input id="f-business" name="business" type="text" autocomplete="organization" required>
+              </div>
+              <div class="field">
+                <label for="f-phone">WhatsApp number</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="082 123 4567" required>
+              </div>
+              <div class="field">
+                <label for="f-message">Message</label>
+                <textarea id="f-message" name="message" rows="4" placeholder="Tell me a bit about your business and what you need."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block btn-lg">Send message</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/favicon.svg" alt="" width="32" height="32">
+        <span>Fresh Ads <b>Studio</b></span>
+      </a>
+      <p>Monthly short videos &amp; ads for small businesses across South Africa.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="prices.html">Prices</a>
+        <a href="work.html">Videos &amp; reviews</a>
+        <a href="contact.html">About &amp; contact</a>
+      </nav>
+      <p class="small">WhatsApp <span class="js-phone">071 330 7822</span> · <span class="js-email-text">esteanbotha@gmail.com</span></p>
+      <p class="small">© <span id="year">2026</span> Fresh Ads Studio</p>
+    </div>
+  </footer>
+
+  <!-- Sticky WhatsApp button -->
+  <a href="https://wa.me/27713307822" class="wa-float js-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="30" height="30"><use href="#icon-wa"/></svg>
+  </a>
+
+  <!-- SVG sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icon-wa" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.06c-.24.68-1.42 1.32-1.96 1.37-.5.05-.97.24-3.28-.68-2.78-1.1-4.54-3.94-4.67-4.13-.14-.18-1.12-1.49-1.12-2.84 0-1.35.71-2.01.96-2.29.25-.27.55-.34.73-.34l.53.01c.17.01.4-.06.62.48.24.55.8 1.92.87 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.93 1.93 1.22 2.21 1.36.27.14.43.11.59-.07.16-.18.69-.8.87-1.08.18-.27.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.2.53.32.07.11.07.66-.17 1.33Z"/>
+    </symbol>
+  </svg>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fresh Ads Studio | Monthly Ads &amp; Video Content for Small Businesses in South Africa</title>
-  <meta name="description" content="Fresh Ads Studio creates professional social media ads and short promo videos for small businesses across South Africa, every month. No agency, no long contracts. Chat on WhatsApp or email.">
+  <meta name="description" content="Fresh Ads Studio creates professional short-form videos and social media ads for small businesses across South Africa, every month. From R500 a month. No agency, no long contracts.">
   <meta name="theme-color" content="#0e9f6e">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -40,21 +40,26 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Fresh Ads Studio home">
+      <a href="index.html" class="brand" aria-label="Fresh Ads Studio home">
         <img src="assets/favicon.svg" alt="" width="36" height="36">
         <span>Fresh Ads <b>Studio</b></span>
       </a>
       <nav class="main-nav" aria-label="Main">
-        <a href="#services">What I do</a>
-        <a href="#packages">Packages</a>
-        <a href="work.html">Work &amp; reviews</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="prices.html">Prices</a>
+        <a href="work.html">Videos &amp; reviews</a>
+        <a href="contact.html">About &amp; contact</a>
       </nav>
       <div class="header-actions">
         <a href="https://wa.me/27713307822" class="btn btn-primary btn-sm header-cta js-wa" target="_blank" rel="noopener">WhatsApp me</a>
       </div>
     </div>
+    <nav class="mobile-nav" aria-label="Pages">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="prices.html">Prices</a>
+      <a href="work.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main id="main">
@@ -80,8 +85,7 @@
         </div>
         <div class="hero-media" aria-hidden="false">
           <figure class="phone phone-main">
-            <img src="assets/portfolio/reel-salon.svg" alt="Vertical promo video for a hair salon advertising a balayage special, with the caption 'Book your appointment today'" width="540" height="960" fetchpriority="high">
-            <span class="play" aria-hidden="true"></span>
+            <video src="assets/videos/its-all-accounting-xmas.mp4" poster="assets/videos/its-all-accounting-xmas.jpg" muted loop playsinline autoplay preload="metadata" data-autoplay width="540" height="960" aria-label="Christmas story video made for It's All Accounting: Merry Christmas in gold script with a polaroid photo of their team"></video>
           </figure>
           <figure class="phone phone-side">
             <img src="assets/portfolio/ad-hardware.svg" alt="Square Facebook ad for a hardware store's winter sale with 20% off heaters, paint and tools" width="800" height="800">
@@ -174,55 +178,7 @@
       </div>
     </section>
 
-    <!-- ============ 5. PACKAGES ============ -->
-    <section class="section packages" id="packages" aria-labelledby="packages-title">
-      <div class="container">
-        <p class="eyebrow center">Packages</p>
-        <h2 id="packages-title" class="section-title">Simple monthly pricing</h2>
-        <p class="section-sub">No set-up fees. No long contracts. Ad spend is paid directly to Meta and isn't included.</p>
-        <div class="pricing">
-          <article class="price-card">
-            <h3>Starter</h3>
-            <p class="price"><span class="amount">R500</span><span class="per">/month</span></p>
-            <p class="price-desc">One fresh video every week, so your page never goes quiet.</p>
-            <ul class="features">
-              <li>4 short-form videos a month</li>
-              <li>A new video posted every week</li>
-              <li>Captions on every video</li>
-              <li>Monthly report</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline btn-block" data-pkg="Starter">Choose Starter</a>
-          </article>
-
-          <article class="price-card featured">
-            <span class="badge">Most popular</span>
-            <h3>Growth</h3>
-            <p class="price"><span class="amount">R750</span><span class="per">/month</span></p>
-            <p class="price-desc">Three short videos a week, plus ads that bring in new customers.</p>
-            <ul class="features">
-              <li>12 short-form videos a month</li>
-              <li>3 new videos posted every week</li>
-              <li>Facebook &amp; Instagram ad management</li>
-              <li>Captions on every video</li>
-              <li>Monthly report</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-block" data-pkg="Growth">Choose Growth</a>
-          </article>
-
-          <article class="price-card">
-            <h3>Premium</h3>
-            <p class="price"><span class="amount">R1 000</span><span class="per">/month</span></p>
-            <p class="price-desc">A new short video every day, so customers see you all month.</p>
-            <ul class="features">
-              <li>Everything in Growth</li>
-              <li>30 short-form videos a month</li>
-              <li>A new video posted every day</li>
-              <li>Priority support &amp; faster turnaround</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline btn-block" data-pkg="Premium">Choose Premium</a>
-          </article>
-        </div>
-      </div>    <!-- ============ RECENT WORK (teaser; full portfolio on work.html) ============ -->
+    <!-- ============ RECENT WORK (teaser; full portfolio on work.html) ============ -->
     <section class="section work" id="work" aria-labelledby="work-title">
       <div class="container">
         <p class="eyebrow center">Recent work</p>
@@ -242,96 +198,76 @@
           </figure>
         </div>
         <div class="center-actions">
-          <a href="work.html" class="btn btn-primary btn-lg">See all my work &amp; reviews</a>
+          <a href="work.html" class="btn btn-primary btn-lg">See all videos &amp; reviews</a>
         </div>
       </div>
     </section>
 
 
-    </section>
 
-    <!-- ============ 8. FAQ ============ -->
-    <section class="section faq" id="faq" aria-labelledby="faq-title">
-      <div class="container narrow">
-        <h2 id="faq-title" class="section-title">Questions? Answered.</h2>
-        <details>
-          <summary>How long is the contract?</summary>
-          <p>There's no long contract. All packages are month-to-month. I just ask for 30 days' notice if you'd like to stop.</p>
-        </details>
-        <details>
-          <summary>What do you need from me?</summary>
-          <p>Your logo, a few photos or short clips of your business (phone videos are fine) and 20 minutes a month to approve the plan. I'll guide you through the rest.</p>
-        </details>
-        <details>
-          <summary>How quickly will I get my content?</summary>
-          <p>Your first batch of content is ready within 7 working days of our first chat. After that, I deliver each month's content before the month starts. Premium clients get changes back within 24 hours.</p>
-        </details>
-        <details>
-          <summary>Do I own the content?</summary>
-          <p>Yes. Once you've paid for the month, all the ads and videos are yours to keep and use wherever you like, even if you stop working with me.</p>
-        </details>
-        <details>
-          <summary>Is the ad spend included in the price?</summary>
-          <p>No. Ad spend is paid directly to Facebook/Instagram from your own account, so you stay in control. Most small businesses start with R300 to R1 000 a month, and I'll help you choose.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- ============ 9. CONTACT ============ -->
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <!-- ============ PRICES PREVIEW (full details on prices.html) ============ -->
+    <section class="section" aria-labelledby="prices-title">
       <div class="container">
-        <p class="eyebrow center">Let's talk</p>
-        <h2 id="contact-title" class="section-title">WhatsApp or email me</h2>
-        <p class="section-sub">No phone calls needed. Send a WhatsApp or an email, or fill in the form. I usually reply within a few hours.</p>
-
-        <div class="contact-grid">
-          <ul class="contact-links">
-              <li>
-                <a href="https://wa.me/27713307822" class="js-wa" target="_blank" rel="noopener">
-                  <span class="cl-icon wa" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><use href="#icon-wa"/></svg></span>
-                  <span><b>WhatsApp</b><span class="js-phone">071 330 7822</span></span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:esteanbotha@gmail.com" class="js-email">
-                  <span class="cl-icon" aria-hidden="true">✉️</span>
-                  <span><b>Email</b><span class="js-email-text">esteanbotha@gmail.com</span></span>
-                </a>
-              </li>
-            </ul>
-            <form class="card contact-form" id="contact-form" novalidate>
-              <div class="field">
-                <label for="f-name">Your name</label>
-                <input id="f-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="f-business">Business name</label>
-                <input id="f-business" name="business" type="text" autocomplete="organization" required>
-              </div>
-              <div class="field">
-                <label for="f-phone">WhatsApp number</label>
-                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="082 123 4567" required>
-              </div>
-              <div class="field">
-                <label for="f-message">Message</label>
-                <textarea id="f-message" name="message" rows="4" placeholder="Tell me a bit about your business and what you need."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block btn-lg">Send message</button>
-              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            </form>
+        <p class="eyebrow center">Prices</p>
+        <h2 id="prices-title" class="section-title">Simple monthly packages</h2>
+        <p class="section-sub">No set-up fees and no long contracts.</p>
+        <div class="mini-prices">
+          <a class="mini-price" href="prices.html#packages">
+            <span class="mini-name">Starter</span>
+            <span class="mini-amount">R500<small>/month</small></span>
+            <span class="mini-what">4 short videos a month</span>
+          </a>
+          <a class="mini-price featured" href="prices.html#packages">
+            <span class="badge">Most popular</span>
+            <span class="mini-name">Growth</span>
+            <span class="mini-amount">R750<small>/month</small></span>
+            <span class="mini-what">12 short videos + ad management</span>
+          </a>
+          <a class="mini-price" href="prices.html#packages">
+            <span class="mini-name">Premium</span>
+            <span class="mini-amount">R1 000<small>/month</small></span>
+            <span class="mini-what">30 short videos, one every day</span>
+          </a>
+        </div>
+        <div class="center-actions">
+          <a href="prices.html" class="btn btn-outline btn-lg">See all prices &amp; what's included</a>
         </div>
       </div>
     </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <h2 id="cta-title">Ready for fresh content every month?</h2>
+          <p>Send me a WhatsApp or an email and tell me about your business. I usually reply within a few hours.</p>
+          <div class="center-actions">
+            <a href="https://wa.me/27713307822" class="btn btn-light btn-lg js-wa" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#icon-wa"/></svg>
+              <span>WhatsApp me</span>
+            </a>
+            <a href="mailto:esteanbotha@gmail.com" class="btn btn-ghost btn-lg js-email">Email me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a href="#top" class="brand">
+      <a href="index.html" class="brand">
         <img src="assets/favicon.svg" alt="" width="32" height="32">
         <span>Fresh Ads <b>Studio</b></span>
       </a>
-      <p>Monthly ads &amp; videos for small businesses across South Africa.</p>
+      <p>Monthly short videos &amp; ads for small businesses across South Africa.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="prices.html">Prices</a>
+        <a href="work.html">Videos &amp; reviews</a>
+        <a href="contact.html">About &amp; contact</a>
+      </nav>
+      <p class="small">WhatsApp <span class="js-phone">071 330 7822</span> · <span class="js-email-text">esteanbotha@gmail.com</span></p>
       <p class="small">© <span id="year">2026</span> Fresh Ads Studio</p>
     </div>
   </footer>
