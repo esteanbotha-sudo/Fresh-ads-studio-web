@@ -84,12 +84,9 @@ p { margin: 0 0 1em; }
 .header-actions { display: flex; align-items: center; gap: 10px; }
 .header-cta { display: none; }
 
-.lang-toggle { display: inline-flex; background: var(--bg-alt); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
-.lang-toggle button {
   font: inherit; font-weight: 800; font-size: .85rem; border: 0; background: transparent; color: var(--ink-soft);
   padding: 6px 12px; border-radius: 999px; cursor: pointer; min-width: 44px; min-height: 34px;
 }
-.lang-toggle button[aria-pressed="true"] { background: var(--primary); color: #fff; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 36px 0 56px; background: radial-gradient(1200px 500px at 85% -10%, var(--primary-soft), transparent 70%); overflow: hidden; }
