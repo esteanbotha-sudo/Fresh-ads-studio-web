@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" font-family="Nunito, 'Segoe UI', Arial, sans-serif">
+<rect width="800" height="800" fill="#ffd23f"/>
+<circle cx="680" cy="640" r="260" fill="#ff8c42" opacity=".9"/><circle cx="120" cy="120" r="70" fill="#ff8c42" opacity=".35"/>
+<text x="60" y="110" fill="#1b1b1b" font-size="30" font-weight="800" opacity=".85">Karoo Hardware</text>
+<text x="60" y="320" fill="#1b1b1b" font-size="84" font-weight="900">Winter sale</text>
+<text x="60" y="415" fill="#1b1b1b" font-size="84" font-weight="900">20% off</text>
+<text x="60" y="490" fill="#1b1b1b" font-size="34" font-weight="600" opacity=".85">Heaters, paint and tools this month</text>
+<rect x="60" y="600" width="212" height="80" rx="40" fill="#1b1b1b"/>
+<text x="90" y="652" fill="#ffd23f" font-size="32" font-weight="900">Shop now</text>
+</svg>

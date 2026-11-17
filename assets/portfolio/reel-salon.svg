@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" font-family="Nunito, 'Segoe UI', Arial, sans-serif">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7eb3"/><stop offset="1" stop-color="#c2185b"/></linearGradient></defs>
+<rect width="540" height="960" fill="url(#g)"/>
+<circle cx="460" cy="180" r="170" fill="#fff" opacity=".12"/><circle cx="60" cy="700" r="220" fill="#fff" opacity=".08"/>
+<rect x="40" y="60" width="64" height="64" rx="32" fill="#fff" opacity=".9"/><text x="120" y="102" fill="#fff" font-size="26" font-weight="800">Glow Hair Studio</text>
+<rect x="40" y="300" width="88" height="48" rx="24" fill="#fff"/><text x="60" y="333" fill="#c2185b" font-size="24" font-weight="900">NEW</text>
+<text x="40" y="430" fill="#fff" font-size="64" font-weight="900">Balayage</text>
+<text x="40" y="505" fill="#fff" font-size="64" font-weight="900">special</text>
+<rect x="40" y="780" width="460" height="96" rx="18" fill="#000" opacity=".55"/>
+<text x="270" y="840" fill="#fff" font-size="30" font-weight="800" text-anchor="middle">Book jou afspraak vandag!</text>
+</svg>
