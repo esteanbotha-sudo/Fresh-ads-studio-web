@@ -1,12 +1,12 @@
 /* ==========================================================
    Fresh Ads Studio: styles (mobile-first)
-   Brand colours are set in :root below (deep green --primary, gold --gold)
+   Brand colours are set in :root below (royal blue --primary, gold --gold)
    ========================================================== */
 :root {
-  /* Brand: deep green + gold */
-  --primary: #0f3d2a;
-  --primary-dark: #0a2b1d;
-  --primary-soft: #eaf1ec;
+  /* Brand: royal blue + gold */
+  --primary: #1b3a8c;
+  --primary-dark: #122a6b;
+  --primary-soft: #eaf0fb;
   --accent: #c9a24a;
   --gold: #c9a24a;
   --gold-light: #e9cf8a;
@@ -15,11 +15,11 @@
   --wa: #25d366;
   --wa-dark: #128c4b;
 
-  --ink: #10241a;
-  --ink-soft: #4a5a51;
-  --line: #e3e7e0;
+  --ink: #121a2e;
+  --ink-soft: #4a5368;
+  --line: #e3e6ee;
   --bg: #ffffff;
-  --bg-alt: #f7f6f1;
+  --bg-alt: #f6f7fb;
   --serif: "DM Serif Display", Georgia, "Times New Roman", serif;
 
   --radius: 20px;
@@ -147,7 +147,7 @@ p { margin: 0 0 1em; }
 .features { list-style: none; padding: 0; margin: 6px 0 26px; flex: 1; }
 .features li { padding: 8px 0 8px 30px; position: relative; border-top: 1px dashed var(--line); }
 .features li:first-child { border-top: 0; }
-.features li::before { content: ""; position: absolute; left: 0; top: 13px; width: 18px; height: 18px; border-radius: 50%; background: var(--primary-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%230f3d2a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+.features li::before { content: ""; position: absolute; left: 0; top: 13px; width: 18px; height: 18px; border-radius: 50%; background: var(--primary-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%231b3a8c' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
 .price-card.featured { border-color: var(--primary); box-shadow: var(--shadow-lg); }
 .badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--ink); font-weight: 900; font-size: .85rem; padding: 5px 14px; border-radius: 999px; white-space: nowrap; }
 
@@ -412,10 +412,10 @@ p { margin: 0 0 1em; }
 @media (min-width: 960px) { .reasons { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* ---------- Christmas special ---------- */
-.promo-bar { background: #0f3d2a; color: #fff; text-align: center; font-size: .92rem; font-weight: 700; padding: 9px max(16px, env(safe-area-inset-right, 0px)) 9px max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 12px; }
+.promo-bar { background: #1b3a8c; color: #fff; text-align: center; font-size: .92rem; font-weight: 700; padding: 9px max(16px, env(safe-area-inset-right, 0px)) 9px max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 12px; }
 .promo-bar b { color: #f0cf7a; }
-.promo-bar a { color: #0f3d2a; background: #f0cf7a; text-decoration: none; font-weight: 900; padding: 3px 12px; border-radius: 999px; white-space: nowrap; }
-.xmas-deal { position: relative; overflow: hidden; background: radial-gradient(700px 300px at 50% 0%, #1f6b47, #0f3d2a 70%); color: #fff; border-radius: var(--radius-lg); padding: 34px 22px; margin: 0 auto 34px; max-width: 760px; text-align: center; box-shadow: var(--shadow-lg); }
+.promo-bar a { color: #1b3a8c; background: #f0cf7a; text-decoration: none; font-weight: 900; padding: 3px 12px; border-radius: 999px; white-space: nowrap; }
+.xmas-deal { position: relative; overflow: hidden; background: radial-gradient(700px 300px at 50% 0%, #2c55b0, #1b3a8c 70%); color: #fff; border-radius: var(--radius-lg); padding: 34px 22px; margin: 0 auto 34px; max-width: 760px; text-align: center; box-shadow: var(--shadow-lg); }
 .xmas-deal::before { content: ""; position: absolute; inset: 0 0 auto; height: 14px; background: repeating-linear-gradient(90deg, #ef476f 0 10px, transparent 10px 30px, #ffd166 30px 40px, transparent 40px 60px, #06d6a0 60px 70px, transparent 70px 90px); opacity: .9; }
 .xmas-eyebrow { color: #f0cf7a; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; margin: 6px 0 .4em; }
 .xmas-deal h2 { font-size: clamp(1.7rem, 5.5vw, 2.4rem); color: #fff; }
@@ -425,7 +425,7 @@ p { margin: 0 0 1em; }
 .xmas-prices span { font-weight: 800; }
 .xmas-prices s { color: rgba(255, 255, 255, .55); font-weight: 700; }
 .xmas-prices b { color: #f0cf7a; font-size: 1.35rem; font-weight: 900; }
-.btn-gold { background: #f0cf7a; color: #0f3d2a; }
+.btn-gold { background: #f0cf7a; color: #1b3a8c; }
 .btn-gold:hover { background: #ffe09a; }
 .price .was { display: block; width: 100%; color: var(--ink-soft); font-weight: 700; font-size: 1.05rem; margin-bottom: -4px; }
 .price { flex-wrap: wrap; }
@@ -437,7 +437,7 @@ p { margin: 0 0 1em; }
 
 
 /* ==========================================================
-   Deep green + gold theme
+   Royal blue + gold theme
    ========================================================== */
 .brand { gap: 10px; }
 .wordmark { display: flex; flex-direction: column; line-height: 1; }
@@ -450,8 +450,8 @@ p { margin: 0 0 1em; }
 .hero { background: radial-gradient(1100px 480px at 85% -10%, var(--gold-soft), transparent 65%), radial-gradient(900px 500px at 0% 0%, var(--primary-soft), transparent 60%); }
 .hero-points li::before { color: var(--gold-dark); }
 
-.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 22px -12px rgba(15, 61, 42, .7); }
-.btn-primary:hover { background: #17533a; }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 22px -12px rgba(27, 58, 140, .7); }
+.btn-primary:hover { background: #2a4fa8; }
 .btn-outline { color: var(--primary); border-color: var(--primary); }
 .btn-outline:hover { background: var(--primary-soft); }
 
@@ -465,10 +465,10 @@ p { margin: 0 0 1em; }
 .mini-price:hover { border-color: var(--primary); }
 
 .tag, .tag.client { background: var(--primary); color: var(--gold-light); }
-.showcase { background: linear-gradient(160deg, #13472f, var(--primary-dark)); }
+.showcase { background: linear-gradient(160deg, #24489f, var(--primary-dark)); }
 .showcase .eyebrow { color: var(--gold-light); }
 
-.cta-band { background: linear-gradient(160deg, #13472f, var(--primary-dark)); border: 1px solid rgba(201, 162, 74, .35); }
+.cta-band { background: linear-gradient(160deg, #24489f, var(--primary-dark)); border: 1px solid rgba(201, 162, 74, .35); }
 .cta-band h2 { color: #fff; }
 .cta-band .btn-light { background: var(--gold); color: var(--primary-dark); }
 .cta-band .btn-light:hover { background: var(--gold-light); }
@@ -502,3 +502,16 @@ h1, h2, .section-title, .page-title { font-family: var(--serif); font-weight: 40
 .copy-btn { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font: inherit; font-weight: 800; font-size: .85rem; color: var(--primary); background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 999px; padding: 6px 14px; min-height: 36px; cursor: pointer; }
 .copy-btn:hover { background: var(--gold-light); }
 .wa-send { margin-top: 12px; text-align: center; }
+
+/* ---------- Photos ---------- */
+.who-grid { display: grid; gap: 18px; margin-top: 32px; }
+.who-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.who-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.who-body { padding: 20px 22px 24px; }
+.who-body h3 { font-size: 1.2rem; }
+.who-body p { color: var(--ink-soft); margin: 0; }
+.about-photo { margin: 24px 0 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.about-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.hero-banner { margin: 36px auto 0; max-width: 1000px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+.hero-banner img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: center 45%; }
+@media (min-width: 760px) { .who-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
