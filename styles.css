@@ -635,3 +635,56 @@ h1, h2, .section-title, .page-title, .amount, .mini-amount { color: var(--navy);
 .btn-gold { background: var(--p-pink-2); color: var(--navy); }
 .btn-gold:hover { background: #f3b2c7; }
 :focus-visible { outline-color: var(--p-pink-2); }
+
+/* ---------- Soft golden glow around the page edges ---------- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 70;
+  box-shadow: inset 0 0 70px 6px rgba(232, 192, 96, .30), inset 0 0 18px rgba(240, 207, 122, .35);
+}
+@media (min-width: 760px) {
+  body::after { box-shadow: inset 0 0 120px 12px rgba(232, 192, 96, .28), inset 0 0 24px rgba(240, 207, 122, .32); }
+}
+@media print { body::after { display: none; } }
+
+/* ==========================================================
+   Two pastels only: baby blue + pastel gold
+   ========================================================== */
+:root {
+  --p-blue: #dcebfb;      /* baby blue */
+  --p-blue-2: #bcd6f5;    /* deeper baby blue (buttons) */
+  --p-gold: #fbefc8;      /* pastel gold */
+  --p-gold-2: #f2dc9a;    /* deeper pastel gold */
+  --p-pink: var(--p-gold);
+  --p-pink-2: var(--p-gold-2);
+  --p-butter: var(--p-gold);
+  --p-mint: #e8f2fd;
+  --p-lav: #eef5fe;
+  --p-peach: #fdf6df;
+  --rose: #8a6a1f;
+}
+/* alternate blue / gold boxes */
+.service-card:nth-child(odd), .step:nth-child(odd), .reason:nth-child(odd), .about-points .card:nth-child(odd), .get-list li:nth-child(odd) { background: var(--p-blue); }
+.service-card:nth-child(even), .step:nth-child(even), .reason:nth-child(even), .about-points .card:nth-child(even), .get-list li:nth-child(even) { background: var(--p-gold); }
+.who-card:nth-child(1) .who-body, .who-card:nth-child(3) .who-body { background: var(--p-blue); }
+.who-card:nth-child(2) .who-body { background: var(--p-gold); }
+.mini-price:nth-child(1), .price-card:nth-child(1), .mini-price:nth-child(3), .price-card:nth-child(3) { background: var(--p-blue); }
+.mini-price:nth-child(2), .price-card:nth-child(2) { background: var(--p-gold); }
+.problem { background: var(--p-peach); }
+.how { background: var(--p-lav); }
+.hero { background: radial-gradient(900px 460px at 90% -10%, var(--p-gold), transparent 65%), radial-gradient(900px 520px at 0% 0%, var(--p-blue), transparent 60%), #fff; }
+.showcase { background: linear-gradient(150deg, var(--p-blue), var(--p-mint)); }
+.cta-band { background: linear-gradient(135deg, var(--p-blue), var(--p-mint) 55%, var(--p-gold)); }
+.xmas-deal { background: linear-gradient(160deg, var(--p-gold), var(--p-peach)); }
+.compare thead th { background: var(--p-peach); }
+.tag, .tag.client { background: var(--p-gold); }
+.badge, .copy-btn { border-color: var(--p-gold-2); }
+
+/* theme colours only: WhatsApp buttons and Christmas lights */
+.wa-float, .wa-float::before { background: var(--p-blue-2); color: var(--navy); }
+.wa-float { box-shadow: 0 10px 25px -8px rgba(27, 42, 82, .45); }
+.cl-icon.wa { background: var(--p-blue-2); color: var(--navy); }
+.xmas-deal::before { background: repeating-linear-gradient(90deg, var(--p-blue-2) 0 10px, transparent 10px 30px, var(--p-gold-2) 30px 40px, transparent 40px 60px); }
