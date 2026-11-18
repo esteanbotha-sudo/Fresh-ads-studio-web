@@ -145,9 +145,37 @@ const MSG = {
     const text =
       `${MSG.formIntro}\n\nName: ${data.name}\nBusiness: ${data.business}\nPhone: ${data.phone}` +
       (data.message ? `\nMessage: ${data.message}` : "");
-    window.open(waLink(text), "_blank", "noopener");
-    status.textContent = MSG.opened;
+    // Show a real link (pop-up windows are often blocked)
+    status.textContent = "Thanks! Tap the button to send your message on WhatsApp.";
     status.classList.add("ok");
+    const go = document.createElement("a");
+    go.className = "btn btn-primary btn-block btn-lg wa-send";
+    go.href = waLink(text);
+    go.target = "_blank";
+    go.rel = "noopener";
+    go.textContent = "Open WhatsApp with my message";
+    const old = form.querySelector(".wa-send");
+    if (old) old.remove();
+    status.after(go);
+    go.focus();
+  });
+
+  /* ---------- Copy buttons (number and email) ---------- */
+  $$("[data-copy]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const value = btn.dataset.copy === "email" ? CONFIG.email : CONFIG.phoneDisplay;
+      const done = () => { const t = btn.textContent; btn.textContent = "Copied"; setTimeout(() => (btn.textContent = t), 1600); };
+      const fallback = () => {
+        const target = btn.parentElement.querySelector(btn.dataset.copy === "email" ? ".js-email-text" : ".js-phone");
+        if (!target) return;
+        const range = document.createRange(); range.selectNodeContents(target);
+        const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
+        btn.textContent = "Selected, now copy";
+      };
+      try {
+        navigator.clipboard.writeText(value).then(done, fallback);
+      } catch (e) { fallback(); }
+    });
   });
 
   /* ---------- Videos: play while on screen, tap to pause ---------- */
