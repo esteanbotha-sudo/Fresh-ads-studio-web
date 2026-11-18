@@ -81,7 +81,7 @@ const MSG = {
   if (yearlyOffer && params.get("billing") === "yearly") setBilling("yearly");
   const pkgParam = params.get("pkg");
   const msgBox = $("#f-message");
-  if (pkgParam && msgBox && /^(Starter|Growth|Premium)$/.test(pkgParam)) {
+  if (pkgParam && msgBox && /^(Starter|Plus|Premium)$/.test(pkgParam)) {
     msgBox.value = params.get("plan") === "yearly"
       ? `Hi Fresh Ads Studio, I'd like to book the ${pkgParam} package for a full year with the Christmas special (2 months free).`
       : MSG.waPkg(pkgParam);
