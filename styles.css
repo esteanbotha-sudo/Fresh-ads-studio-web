@@ -561,3 +561,6 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   .price-card.featured, .mini-price.featured { animation: none; }
 }
+
+/* full name in the wordmark */
+.wm-sub { letter-spacing: .14em; font-size: .56rem; white-space: nowrap; }

@@ -1,4 +1,4 @@
-# Fresh Ads Studio website
+# Fresh Ads Advertisement Studio website
 
 A fast, mobile-first, one-page website. It's plain HTML, CSS and JavaScript, so there's no build step. Upload the folder to any static host (Netlify, Vercel, GitHub Pages, cPanel, etc.) and it works.
 

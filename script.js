@@ -1,5 +1,5 @@
 /* ==========================================================
-   Fresh Ads Studio: site script
+   Fresh Ads Advertisement Studio: site script
    Edit CONFIG with your contact details.
    ========================================================== */
 const CONFIG = {
@@ -13,8 +13,8 @@ const CONFIG = {
 };
 
 const MSG = {
-  waHello: "Hi Fresh Ads Studio, I'd like to chat about ads for my business.",
-  waPkg: (p) => `Hi Fresh Ads Studio, I'm interested in the ${p} package.`,
+  waHello: "Hi Fresh Ads Advertisement Studio, I'd like to chat about ads for my business.",
+  waPkg: (p) => `Hi Fresh Ads Advertisement Studio, I'm interested in the ${p} package.`,
   required: "Please fill in your name, business and WhatsApp number.",
   phone: "Please enter a valid WhatsApp number.",
   sending: "Sending…",
@@ -83,7 +83,7 @@ const MSG = {
   const msgBox = $("#f-message");
   if (pkgParam && msgBox && /^(Starter|Plus|Premium)$/.test(pkgParam)) {
     msgBox.value = params.get("plan") === "yearly"
-      ? `Hi Fresh Ads Studio, I'd like to book the ${pkgParam} package for a full year with the Christmas special (2 months free).`
+      ? `Hi Fresh Ads Advertisement Studio, I'd like to book the ${pkgParam} package for a full year with the Christmas special (2 months free).`
       : MSG.waPkg(pkgParam);
   }
 
