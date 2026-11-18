@@ -21,6 +21,10 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="promo-bar" data-until="2026-12-25">
+    <span><b>Christmas special:</b> book a full year by 24 December and get 2 months free.</span>
+    <a href="prices.html?billing=yearly#xmas-deal">See the deal</a>
+  </div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header">
@@ -55,15 +59,26 @@
       <div class="container">
         <p class="eyebrow center">Prices</p>
         <h1 id="packages-title" class="section-title page-title">Simple pricing</h1>
-        <p class="section-sub">No set-up fees. Pay month-to-month, or book a full year upfront and get 2 months free. Ad spend is paid directly to Meta and isn't included.</p>
-        <div class="billing-toggle" role="group" aria-label="Billing period">
+        <p class="section-sub">No set-up fees. Pay month-to-month<span data-until="2026-12-25">, or book a full year before 24 December and get 2 months free</span>. Ad spend is paid directly to Meta and isn't included.</p>
+        <aside class="xmas-deal" id="xmas-deal" data-until="2026-12-25" aria-labelledby="xmas-title">
+          <p class="xmas-eyebrow">Christmas special</p>
+          <h2 id="xmas-title">Book a year, get 2 months free</h2>
+          <p>Book any package for 12 months before <b>24 December</b> and pay for only 10. Your content starts in the new year, and your price is locked in for the whole year.</p>
+          <ul class="xmas-prices">
+            <li><span>Starter</span><s>R6 000</s><b>R5 000</b></li>
+            <li><span>Growth</span><s>R9 000</s><b>R7 500</b></li>
+            <li><span>Premium</span><s>R12 000</s><b>R10 000</b></li>
+          </ul>
+          <button type="button" class="btn btn-gold btn-lg" data-billing-jump="yearly">Choose my Christmas package</button>
+        </aside>
+        <div class="billing-toggle" role="group" aria-label="Billing period" data-until="2026-12-25">
           <button type="button" data-billing="monthly" aria-pressed="true">Monthly</button>
           <button type="button" data-billing="yearly" aria-pressed="false">Yearly <span class="save">2 months free</span></button>
         </div>
         <div class="pricing">
           <article class="price-card">
             <h3>Starter</h3>
-            <p class="price" data-monthly="R500" data-yearly="R5 000"><span class="amount">R500</span><span class="per">/month</span></p>
+            <p class="price" data-monthly="R500" data-yearly="R5 000" data-full="R6 000"><span class="amount">R500</span><span class="per">/month</span></p>
             <p class="yearly-note" hidden>Works out to R417/month. Save 2 months.</p>
             <p class="price-desc">One fresh video every week, so your page never goes quiet.</p>
             <ul class="features">
@@ -78,7 +93,7 @@
           <article class="price-card featured">
             <span class="badge">Most popular</span>
             <h3>Growth</h3>
-            <p class="price" data-monthly="R750" data-yearly="R7 500"><span class="amount">R750</span><span class="per">/month</span></p>
+            <p class="price" data-monthly="R750" data-yearly="R7 500" data-full="R9 000"><span class="amount">R750</span><span class="per">/month</span></p>
             <p class="yearly-note" hidden>Works out to R625/month. Save 2 months.</p>
             <p class="price-desc">Three short videos a week, plus ads that bring in new customers.</p>
             <ul class="features">
@@ -93,7 +108,7 @@
 
           <article class="price-card">
             <h3>Premium</h3>
-            <p class="price" data-monthly="R1 000" data-yearly="R10 000"><span class="amount">R1 000</span><span class="per">/month</span></p>
+            <p class="price" data-monthly="R1 000" data-yearly="R10 000" data-full="R12 000"><span class="amount">R1 000</span><span class="per">/month</span></p>
             <p class="yearly-note" hidden>Works out to R833/month. Save 2 months.</p>
             <p class="price-desc">A new short video every day, so customers see you all month.</p>
             <ul class="features">
@@ -112,9 +127,9 @@
     <section class="section faq" id="faq" aria-labelledby="faq-title">
       <div class="container narrow">
         <h2 id="faq-title" class="section-title">Questions? Answered.</h2>
-        <details>
+        <details data-until="2026-12-25">
           <summary>Can I book for a whole year?</summary>
-          <p>Yes. Book any package for 12 months, pay upfront and you only pay for 10 months, so you get 2 months free. Your price is locked in for the year. Choose "Yearly" above, then pick your package.</p>
+          <p>Yes, as a Christmas special. Book any package for 12 months before 24 December, pay upfront and you only pay for 10 months, so you get 2 months free. Your price is locked in for the year. Choose "Yearly" above, then pick your package.</p>
         </details>
         <details>
           <summary>How long is the contract?</summary>

@@ -38,6 +38,13 @@ const MSG = {
   $$(".js-email").forEach((a) => (a.href = "mailto:" + CONFIG.email));
   $$(".js-email-text").forEach((el) => (el.textContent = CONFIG.email));
 
+  /* ---------- Time-limited offers: hide anything past its data-until date ---------- */
+  const now = new Date();
+  $$("[data-until]").forEach((el) => {
+    if (now >= new Date(el.dataset.until + "T00:00:00+02:00")) el.remove();
+  });
+  const yearlyOffer = !!$(".billing-toggle");
+
   /* ---------- Header border on scroll ---------- */
   const header = $(".site-header");
   const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 8);
@@ -51,6 +58,10 @@ const MSG = {
     $$(".price[data-monthly]").forEach((p) => {
       p.querySelector(".amount").textContent = yearly ? p.dataset.yearly : p.dataset.monthly;
       p.querySelector(".per").textContent = yearly ? "/year" : "/month";
+      let was = p.querySelector(".was");
+      if (!was) { was = document.createElement("s"); was.className = "was"; p.prepend(was); }
+      was.textContent = p.dataset.full || "";
+      was.hidden = !yearly;
     });
     $$(".yearly-note").forEach((n) => (n.hidden = !yearly));
     $$("a[data-pkg]").forEach((a) => {
@@ -58,14 +69,21 @@ const MSG = {
     });
   }
   $$(".billing-toggle button").forEach((b) => b.addEventListener("click", () => setBilling(b.dataset.billing)));
+  $$("[data-billing-jump]").forEach((b) => b.addEventListener("click", () => {
+    setBilling("yearly");
+    const grid = $(".pricing");
+    if (grid) grid.scrollIntoView({ behavior: reduceMotionPref() ? "auto" : "smooth", block: "start" });
+  }));
+  function reduceMotionPref() { return matchMedia("(prefers-reduced-motion: reduce)").matches; }
 
   /* ---------- Package chosen on the prices page prefills the form ---------- */
   const params = new URLSearchParams(location.search);
+  if (yearlyOffer && params.get("billing") === "yearly") setBilling("yearly");
   const pkgParam = params.get("pkg");
   const msgBox = $("#f-message");
   if (pkgParam && msgBox && /^(Starter|Growth|Premium)$/.test(pkgParam)) {
     msgBox.value = params.get("plan") === "yearly"
-      ? `Hi Fresh Ads Studio, I'd like to book the ${pkgParam} package for a full year (paid yearly, 2 months free).`
+      ? `Hi Fresh Ads Studio, I'd like to book the ${pkgParam} package for a full year with the Christmas special (2 months free).`
       : MSG.waPkg(pkgParam);
   }
 

@@ -23,6 +23,7 @@ The header, menu and footer are repeated on each page, so change them in all fiv
 |---|---|
 | Contact form by email (optional) | Set `CONFIG.formEndpoint` to a Formspree URL. When it's empty, the form opens WhatsApp with the message filled in |
 | Client reviews | None yet. Ask It's All Accounting for a quote and add a reviews section to `work.html` |
+| Christmas special | Banner and deal box hide automatically after 24 December (`data-until="2026-12-25"` in the HTML). Change that date to extend it |
 | Prices (R500 / R750 / R1 000) | `prices.html`, plus the preview cards on `index.html` |
 | Domain | Once you have one, add `<link rel="canonical" href="https://yourdomain/">` in `index.html` |
 
