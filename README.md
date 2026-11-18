@@ -10,7 +10,7 @@ work.html      My work: It's All Accounting showreel and monthly videos
 contact.html   About & contact: about the studio, WhatsApp, email, form
 styles.css     design (brand colour is --primary at the top)
 script.js      CONFIG (contact details), contact form
-assets/        favicon and videos (assets/videos)
+assets/        favicon, logo files (assets/brand) and videos (assets/videos)
 ```
 
 To preview it, open `index.html` in a browser.
@@ -32,3 +32,7 @@ Contact details (WhatsApp 071 330 7822 and your email) are set in `CONFIG` in `s
 ## Adding a video
 
 Export it as MP4. For the web, shrink it first, for example: `ffmpeg -i in.mp4 -vf scale=540:-2 -crf 26 -an -movflags +faststart out.mp4`. Then copy one of the `<figure class="vid">` blocks in `work.html`.
+
+## Logo
+
+`assets/brand/` has the logo as SVG (for print and web) and PNG: `logo-horizontal.png`, `logo-icon-1024.png`, and `profile-picture.png` (1080×1080, for Facebook, Instagram and WhatsApp).
