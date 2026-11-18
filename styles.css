@@ -383,3 +383,24 @@ p { margin: 0 0 1em; }
 .video-masonry .vid, .video-wide .vid { aspect-ratio: auto; background: #fff; border: 1px solid var(--line); }
 .video-masonry .vid video, .video-wide .vid video { aspect-ratio: var(--ar, 9 / 16); height: auto; }
 .video-masonry .vid figcaption, .video-wide .vid figcaption { position: static; background: #fff; border-radius: 0; padding: 10px 12px; }
+
+/* ---------- Why us page ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.reasons { display: grid; gap: 18px; margin-top: 32px; }
+.reason h3 { font-size: 1.2rem; }
+.compare-wrap { overflow-x: auto; margin-top: 28px; border-radius: var(--radius); border: 1px solid var(--line); background: #fff; box-shadow: var(--shadow); }
+.compare { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .98rem; }
+.compare th, .compare td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.compare thead th { font-weight: 900; background: var(--bg-alt); }
+.compare tbody th { font-weight: 800; color: var(--ink); width: 22%; }
+.compare td { color: var(--ink-soft); }
+.compare .us { background: var(--primary-soft); color: var(--primary-dark); font-weight: 800; }
+.compare thead .us { background: var(--primary); color: #fff; }
+.compare tr:last-child th, .compare tr:last-child td { border-bottom: 0; }
+.get-list { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 12px; }
+.get-list li { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px 16px 54px; position: relative; color: var(--ink-soft); }
+.get-list li b { color: var(--ink); }
+.get-list li::before { content: ""; position: absolute; left: 18px; top: 18px; width: 22px; height: 22px; border-radius: 50%; background: var(--primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/15px no-repeat; }
+.mobile-nav a { font-size: .8rem; padding: 7px 4px; }
+@media (min-width: 760px) { .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .reasons { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

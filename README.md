@@ -4,6 +4,7 @@ A fast, mobile-first, one-page website. It's plain HTML, CSS and JavaScript, so 
 
 ```
 index.html     Home: what I do, how it works, recent videos, prices preview
+why.html       Why us: reasons to choose you, comparison, what you get
 prices.html    Prices: the 3 packages and FAQ
 work.html      My work: It's All Accounting showreel and monthly videos
 contact.html   About & contact: about the studio, WhatsApp, email, form
@@ -14,7 +15,7 @@ assets/        favicon and videos (assets/videos)
 
 To preview it, open `index.html` in a browser.
 
-The header, menu and footer are repeated on each page, so change them in all four files.
+The header, menu and footer are repeated on each page, so change them in all five files.
 
 ## Still to do before going live
 
